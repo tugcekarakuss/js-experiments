@@ -16,6 +16,11 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 A simple JavaScript project to practice DOM manipulation and event handling.  
 Clicking the button changes the background color randomly.
 
+### • [Random Background Color Changer](./random-background-color-changer)  
+A mini JavaScript project to practice DOM manipulation, event handling, and generating random hex colors.  
+Clicking the button changes the page's background color to a new random color and displays the hex value.
+
+
 _(More projects will be added as I continue learning.)_
 
 ## 🔮 Future Additions
