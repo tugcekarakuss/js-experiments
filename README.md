@@ -20,6 +20,9 @@ Clicking the button changes the background color randomly.
 A mini JavaScript project to practice DOM manipulation, event handling, and generating random hex colors.  
 Clicking the button changes the page's background color to a new random color and displays the hex value.
 
+### • [Random Quote Generator](./random-quote-generator)  
+A small JavaScript project that displays a random quote on each button click.  
+Built to practice DOM manipulation, event handling, and dynamic content updates.
 
 _(More projects will be added as I continue learning.)_
 
