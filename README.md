@@ -24,6 +24,11 @@ Clicking the button changes the page's background color to a new random color an
 A small JavaScript project that displays a random quote on each button click.  
 Built to practice DOM manipulation, event handling, and dynamic content updates.
 
+### • [Pass The Message](./pass-the-messages)  
+A simple JavaScript project that allows users to type a message and display it instantly on the page. Users can submit the message by clicking the Send button or pressing the Enter key.  
+Built to practice DOM manipulation, event handling, input validation, and dynamic content updates.
+
+
 _(More projects will be added as I continue learning.)_
 
 ## 🔮 Future Additions
