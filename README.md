@@ -10,23 +10,17 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 - Keep a record of my JavaScript learning journey  
 - Move polished and portfolio-ready projects to a separate **Frontend Projects** repository later
 
+
+
 ## 🧪 Projects
 
-### • [Background Color Changer](./background-color-changer)  
-A simple JavaScript project to practice DOM manipulation and event handling.  
-Clicking the button changes the background color randomly.
-
-### • [Random Background Color Changer](./random-background-color-changer)  
-A mini JavaScript project to practice DOM manipulation, event handling, and generating random hex colors.  
-Clicking the button changes the page's background color to a new random color and displays the hex value.
-
-### • [Random Quote Generator](./random-quote-generator)  
-A small JavaScript project that displays a random quote on each button click.  
-Built to practice DOM manipulation, event handling, and dynamic content updates.
-
-### • [Pass The Message](./pass-the-messages)  
-A simple JavaScript project that allows users to type a message and display it instantly on the page. Users can submit the message by clicking the Send button or pressing the Enter key.  
-Built to practice DOM manipulation, event handling, input validation, and dynamic content updates.
+| Preview | Project | Description |
+|--------|---------|--------------|
+| <img src="./background-color-changer/project-preview.gif" width="120"/> | **[Background Color Changer](./background-color-changer)** | Clicking the button changes the background color randomly. A simple practice for DOM manipulation and event handling. |
+| <img src="./random-background-color-changer/project-preview.gif" width="120"/> | **[Random Background Color Changer](./random-background-color-changer)** | Generates random hex colors and applies them to the background. Also displays the generated color code. |
+| <img src="./random-quote-generator/project-preview.gif" width="120"/> | **[Random Quote Generator](./random-quote-generator)** | Displays a random quote on each button click. Good for practicing dynamic content updates. |
+| <img src="./pass-the-messages/project-preview.gif" width="120"/> | **[Pass The Message](./pass-the-messages)** | Lets the user type a message and display it instantly. Focuses on DOM manipulation, input validation, and event handling. |
+| <img src="./counter/project-preview.gif" width="120"/> | **[Counter](./counter)** | A basic counter app with + and - buttons. Clicking increases or decreases the number. Great for beginners practicing DOM manipulation and simple state handling. |
 
 
 _(More projects will be added as I continue learning.)_
