@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="https://picsum.photos/id/1011/1200/800" alt="1" />
+        <img src="https://picsum.photos/id/1018/1200/800" alt="2" />
+        <img src="https://picsum.photos/id/1020/1200/800" alt="3" />
+      </div>
+
+      <button class="nav-btn prev" id="prev" onclick="show_image(-1)">
+        &#10094;
+      </button>
+      <button class="nav-btn next" id="next" onclick="show_image(1)">
+        &#10095;
+      </button>
+
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
