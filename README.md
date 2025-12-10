@@ -21,6 +21,7 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 | <img src="./random-quote-generator/project-preview.gif" width="120"/> | **[Random Quote Generator](./random-quote-generator)** | Displays a random quote on each button click. Good for practicing dynamic content updates. |
 | <img src="./pass-the-messages/project-preview.gif" width="120"/> | **[Pass The Message](./pass-the-messages)** | Lets the user type a message and display it instantly. Focuses on DOM manipulation, input validation, and event handling. |
 | <img src="./counter/project-preview.gif" width="120"/> | **[Counter](./counter)** | A basic counter app with + and - buttons. Clicking increases or decreases the number. Great for beginners practicing DOM manipulation and simple state handling. |
+| <img src="./image-carousel/project-preview.gif" width="120"/> | **[Image Carousel](./image-carousel)** | A responsive image carousel with next/prev controls and clickable dot navigation. Built using HTML, CSS, and JavaScript. |
 
 
 _(More projects will be added as I continue learning.)_
