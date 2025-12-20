@@ -1,0 +1,86 @@
+:root {
+  /* colors */
+  --color-bg: #FDEFE2;
+  --color-text: #04618D;
+
+  /* font sizes */
+  --fs-xl: clamp(4.5rem, 8vw, 7.5rem);
+  --fs-lg: clamp(2rem, 4vw, 3rem);
+  --fs-md: clamp(1.25rem, 2.5vw, 2rem);
+
+  /* spacing */
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-xl: clamp(1.5rem, 8vw, 7.5rem);
+
+  /* border */
+  --border: 5px solid var(--color-text);
+  --radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+.date-time {
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-md) var(--space-xl);
+  max-width: 90vw;
+  text-align: center;
+}
+
+.current-time {
+  font-family: "Fredoka", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.current-time h1 {
+  font-size: var(--fs-lg);
+}
+
+.current-time h2 {
+  font-size: var(--fs-xl);
+}
+
+.current-date {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 6vw, 5rem);
+  padding-top: clamp(2rem, 6vw, 3rem);
+}
+
+.current-date .date {
+  font-size: var(--fs-lg);
+}
+
+.current-date .quote {
+  font-size: var(--fs-md);
+}
+
+article > img {
+  position: fixed;
+  bottom: 1rem;
+  right: 5rem;
+  max-width: min(500px, 50vw);
+  height: auto;
+}
