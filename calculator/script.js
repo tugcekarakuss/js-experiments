@@ -3,7 +3,6 @@ var expression = ""
 function press(num) {
     expression += num;
     userInput.value = expression;
-    console.log(expression)
 }
 function equal() {
     userInput.value = eval(expression);
