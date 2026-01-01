@@ -95,6 +95,13 @@ body {
   background: var(--accent-soft);
   border-radius: var(--radius-sm);
 }
+.grocery-item:hover{
+  cursor: pointer;
+}
+.completed{
+  text-decoration: line-through;
+  opacity: 0.6;
+}
 .item-name {
   font-size: var(--fs-base);
 }
