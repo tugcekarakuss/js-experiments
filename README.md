@@ -25,6 +25,8 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 | <img src="./local-date-and-time/images/project-preview.png" width="120"/> | **[Local Date & Time](./local-date-and-time)** | Displays the current local date and time with proper formatting. Focuses on clean UI and JavaScript Date handling. | [Live](https://local-date-and-time.netlify.app/) | [Figma](https://www.figma.com/community/file/1583234516118868337/cozy-snowman-clock) |
 | <img src="./calculator/images/project-preview.gif" width="120"/> | **[Calculator App](./calculator)** | A simple calculator that performs basic arithmetic operations with a clean and responsive UI. Focuses on DOM manipulation, event handling, and calculation logic. | — | — |
 | <img src="./grocery-list/img/project-preview.gif" width="120"/> | **[Grocery List App](./grocery-list)** | A simple grocery list application that allows users to add, delete, mark items as completed, and clear the entire list using vanilla JavaScript. Focuses on DOM manipulation and event handling. | — | — |
+| <img src="./tip-calculator/img/project-preview.gif" width="120"/> | **[Tip Calculator App](./tip-calculator)** | A simple tip calculator that calculates the tip per person based on bill amount, number of guests, and service quality using vanilla JavaScript. Focuses on DOM manipulation, basic validation logic, and UI state handling. | — | — |
+
 
 
 _(More projects will be added as I continue learning.)_
