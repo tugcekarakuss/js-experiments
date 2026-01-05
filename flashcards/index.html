@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <h1 class="logo">Flashcard</h1>
+      </div>
+      <div class="nav-right">
+        <button class="nav-btn new-card-btn" onclick="showCreateCardBox()">
+          New Card
+        </button>
+        <button class="nav-btn delete-cards-btn" onclick="delFlashCards()">
+          Delete Cards
+        </button>
+      </div>
+    </nav>
+
+    <main class="app">
+      <section class="create-card">
+        <input
+          type="text"
+          class="input-question"
+          placeholder="Write your question"
+        />
+
+        <input
+          type="text"
+          class="input-answer"
+          placeholder="Write the answer"
+        />
+        <div class="form-actions">
+          <button class="save-btn" onclick="addFlashCard()">Save</button>
+          <button class="close-btn" onclick="hideCreateBox()">Close</button>
+        </div>
+      </section>
+
+      <section class="cards-list">
+        <div class="card">
+          <div class="card-front">
+            <p class="card-question">What is HTML?</p>
+          </div>
+          <div class="card-back">
+            <p class="card-answer">HTML is the structure of the web.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
