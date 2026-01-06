@@ -76,7 +76,10 @@ body {
   flex-direction: column;
   gap: 12px;
 }
-
+.heading{
+  text-align: center;
+  font-weight: normal;
+}
 .create-card input {
   padding: 12px 14px;
   border-radius: 8px;
