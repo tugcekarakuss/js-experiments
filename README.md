@@ -26,7 +26,7 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 | <img src="./calculator/images/project-preview.gif" width="120"/> | **[Calculator A](./calculator)** | A simple calculator that performs basic arithmetic operations with a clean and responsive UI. Focuses on DOM manipulation, event handling, and calculation logic. | — | — |
 | <img src="./grocery-list/img/project-preview.gif" width="120"/> | **[Grocery List](./grocery-list)** | A simple grocery list application that allows users to add, delete, mark items as completed, and clear the entire list using vanilla JavaScript. Focuses on DOM manipulation and event handling. | — | — |
 | <img src="./tip-calculator/img/project-preview.gif" width="120"/> | **[Tip Calculator](./tip-calculator)** | A simple tip calculator that calculates the tip per person based on bill amount, number of guests, and service quality using vanilla JavaScript. Focuses on DOM manipulation, basic validation logic, and UI state handling. | — | — |
-| <img src="./flashcards/project-preview.gif" width="120"/> | **[Flashcards](./flashcards)** | A flashcard application that allows users to create, view, and delete flashcards with persistent data stored in localStorage. Focuses on DOM manipulation, event handling, and basic state management using vanilla JavaScript. | — | — |
+| <img src="./flashcards/project-preview.gif" width="120"/> | **[Flashcard](./flashcards)** | A flashcard application that allows users to create, view, and delete flashcards with persistent data stored in localStorage. Focuses on DOM manipulation, event handling, and basic state management using vanilla JavaScript. | — | — |
 
 
 
