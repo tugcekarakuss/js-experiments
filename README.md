@@ -3,7 +3,7 @@
 This repository is my personal sandbox for learning and practicing JavaScript.  
 Here, I will add small projects, exercises, and experiments as I explore new JavaScript concepts and improve my skills.
 
-## 🎯 Purpose
+## Purpose
 
 - Practice JavaScript fundamentals, DOM manipulation, and ES6+ features  
 - Experiment with new coding ideas and techniques  
@@ -12,7 +12,7 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 
 
 
-## 🧪 Projects
+## Projects
 
 | Preview | Project | Description | Live Demo | Figma |
 |--------|---------|--------------|-----------|--------|
@@ -23,25 +23,26 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 | <img src="./counter/project-preview.gif" width="120"/> | **[Counter](./counter)** | A basic counter app with + and - buttons. Clicking increases or decreases the number. Great for beginners practicing DOM manipulation and simple state handling. | — | — |
 | <img src="./image-carousel/project-preview.gif" width="120"/> | **[Image Carousel](./image-carousel)** | A responsive image carousel with next/prev controls and clickable dot navigation. Built using HTML, CSS, and JavaScript. | — | — |
 | <img src="./local-date-and-time/images/project-preview.png" width="120"/> | **[Local Date & Time](./local-date-and-time)** | Displays the current local date and time with proper formatting. Focuses on clean UI and JavaScript Date handling. | [Live](https://local-date-and-time.netlify.app/) | [Figma](https://www.figma.com/community/file/1583234516118868337/cozy-snowman-clock) |
-| <img src="./calculator/images/project-preview.gif" width="120"/> | **[Calculator App](./calculator)** | A simple calculator that performs basic arithmetic operations with a clean and responsive UI. Focuses on DOM manipulation, event handling, and calculation logic. | — | — |
-| <img src="./grocery-list/img/project-preview.gif" width="120"/> | **[Grocery List App](./grocery-list)** | A simple grocery list application that allows users to add, delete, mark items as completed, and clear the entire list using vanilla JavaScript. Focuses on DOM manipulation and event handling. | — | — |
-| <img src="./tip-calculator/img/project-preview.gif" width="120"/> | **[Tip Calculator App](./tip-calculator)** | A simple tip calculator that calculates the tip per person based on bill amount, number of guests, and service quality using vanilla JavaScript. Focuses on DOM manipulation, basic validation logic, and UI state handling. | — | — |
+| <img src="./calculator/images/project-preview.gif" width="120"/> | **[Calculator A](./calculator)** | A simple calculator that performs basic arithmetic operations with a clean and responsive UI. Focuses on DOM manipulation, event handling, and calculation logic. | — | — |
+| <img src="./grocery-list/img/project-preview.gif" width="120"/> | **[Grocery List](./grocery-list)** | A simple grocery list application that allows users to add, delete, mark items as completed, and clear the entire list using vanilla JavaScript. Focuses on DOM manipulation and event handling. | — | — |
+| <img src="./tip-calculator/img/project-preview.gif" width="120"/> | **[Tip Calculator](./tip-calculator)** | A simple tip calculator that calculates the tip per person based on bill amount, number of guests, and service quality using vanilla JavaScript. Focuses on DOM manipulation, basic validation logic, and UI state handling. | — | — |
+| <img src="./flashcards/project-preview.gif" width="120"/> | **[Flashcards](./flashcards)** | A flashcard application that allows users to create, view, and delete flashcards with persistent data stored in localStorage. Focuses on DOM manipulation, event handling, and basic state management using vanilla JavaScript. | — | — |
 
 
 
 _(More projects will be added as I continue learning.)_
 
-## 🔮 Future Additions
+## Future Additions
 
 - Beginner-friendly components (profile cards, interactive menus)  
 - Mini-games and logic exercises  
 - More advanced JavaScript applications as I progress
 
-## 🛠️ How to Use
+## How to Use
 
 This is mainly a personal repository to track my learning process.  
 Feel free to explore the code, provide feedback, or get inspiration from the projects.
 
-## 📜 License
+## License
 
 This repository is for learning and personal use.
