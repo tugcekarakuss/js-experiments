@@ -93,7 +93,6 @@ body {
 }
 
 /* FORM ACTIONS */
-
 .form-actions {
   display: flex;
   gap: 12px;
@@ -121,7 +120,6 @@ body {
 }
 
 /* CARDS */
-
 .cards-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -136,16 +134,9 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
-.card-front {
-  font-weight: 600;
-}
-
-.card-back {
-  margin-top: 10px;
-  color: #555;
-  display: none;
-}
-
-.card.show-answer .card-back {
+.card-question{
   display: block;
+  padding-bottom: 5px;
+  color: blue;
 }
+
