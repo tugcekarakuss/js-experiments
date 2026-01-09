@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 300px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#strengthText {
+  margin-top: 10px;
+  font-weight: bold;
+}
