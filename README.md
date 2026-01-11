@@ -29,6 +29,8 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 | <img src="./flashcards/project-preview.gif" width="120"/> | **[Flashcard](./flashcards)** | A flashcard application that allows users to create, view, and delete flashcards with persistent data stored in localStorage. Focuses on DOM manipulation, event handling, and basic state management using vanilla JavaScript. | — | — |
 | <img src="./live-character-counter/project-preview.gif" width="120"/> | **[Live Character Counter](./live-character-counter)** | A simple live character counter that displays the number of typed characters in real time and enforces a maximum character limit with visual feedback. Focuses on DOM manipulation, event handling, and conditional rendering using vanilla JavaScript. | — | — |
 | <img src="./password-strength-checker/project-preview.gif" width="120"/> | **[Password Strength Checker](./password-strength-checker)** | A simple password strength checker that evaluates user input in real time based on length and character composition. Focuses on DOM manipulation, event handling, and basic validation logic using vanilla JavaScript. | — | — |
+| <img src="./todo-filter/project-preview.gif" width="120"/> | **[Todo Filter App](./todo-filter/)** | A simple todo application that allows users to add tasks, mark them as completed, and filter the list by all, active, or completed items. Focuses on DOM manipulation, event handling, and conditional rendering using vanilla JavaScript. | — | — |
+
 
 
 
