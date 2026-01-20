@@ -19,18 +19,29 @@ const products = [{
     price: 350,
     inStock: true
 }]
-const filterState={
-    selectedCategories:[],
-    maxPrice:500,
-    inStockOnly:false,
-    sortType:"default"
+const filterState = {
+    selectedCategories: [],
+    maxPrice: 5000,
+    inStockOnly: false,
+    sortType: "default"
 
 }
-const checkboxes=document.querySelectorAll(".filter-group input[type='checkbox']")
-checkboxes.forEach(checkbox=>{
-    checkbox.addEventListener("click",()=>{
-        let selectedCategory=checkbox.value
-        console.log(selectedCategory)
+const checkboxes = document.querySelectorAll(".filter-group input[type='checkbox']")
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("click", () => {
+        let selectedCategory = checkbox.value
+        if (checkbox.checked) {
+            if (!filterState.selectedCategories.includes(selectedCategory)) {
+                filterState.selectedCategories.push(selectedCategory)
+                console.log(filterState.selectedCategories)
+            }
+        }
+        else {
+            filterState.selectedCategories = filterState.selectedCategories.filter(
+                category => category !== selectedCategory
+            )
+            console.log(filterState.selectedCategories)
+        }
     })
 })
 
