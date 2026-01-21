@@ -2,7 +2,7 @@ const products = [{
     id: 1,
     name: "Laptop",
     category: "electronics",
-    price: 1200,
+    price: 1500,
     inStock: true
 },
 {
@@ -18,13 +18,34 @@ const products = [{
     category: "clothing",
     price: 350,
     inStock: true
-}]
+},
+{
+    id: 4,
+    name: "Shirt",
+    category: "clothing",
+    price: 500,
+    inStock: false
+}
+    , {
+    id: 5,
+    name: "Alice's Adventures in Wonderland",
+    category: "books",
+    price: 100,
+    inStock: false
+}
+    , {
+    id: 6,
+    name: "Keyboard",
+    category: "electronics",
+    price: 600,
+    inStock: false
+}
+]
 const filterState = {
     selectedCategories: [],
     maxPrice: 5000,
     inStockOnly: false,
     sortType: "default"
-
 }
 const checkboxes = document.querySelectorAll(".filter-group input[type='checkbox']")
 checkboxes.forEach(checkbox => {
@@ -33,15 +54,23 @@ checkboxes.forEach(checkbox => {
         if (checkbox.checked) {
             if (!filterState.selectedCategories.includes(selectedCategory)) {
                 filterState.selectedCategories.push(selectedCategory)
-                console.log(filterState.selectedCategories)
             }
         }
         else {
             filterState.selectedCategories = filterState.selectedCategories.filter(
                 category => category !== selectedCategory
             )
-            console.log(filterState.selectedCategories)
         }
+        applyFilters();
     })
 })
+function applyFilters() {
+    let filteredProduct = products
+    if (filterState.selectedCategories.length > 0) {
+        filteredProduct = products.filter(product =>
+            filterState.selectedCategories.includes(product.category),
+        )
+    }
+    console.log(filteredProduct)
+}
 
