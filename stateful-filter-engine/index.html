@@ -1,62 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Stateful Filter Engine</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="app">
-    <aside class="filters">
-      <h2>Filters</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stateful Filter Engine</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="filters">
+        <h2>Filters</h2>
 
-      <div class="filter-group">
-        <h3>Category</h3>
-        <label>
-          <input type="checkbox" value="electronics" />
-          Electronics
-        </label>
-        <label>
-          <input type="checkbox" value="books" />
-          Books
-        </label>
-        <label>
-          <input type="checkbox" value="clothing" />
-          Clothing
-        </label>
-      </div>
+        <div class="filter-group">
+          <h3>Category</h3>
+          <label>
+            <input class="category-checkbox" type="checkbox" value="electronics" />
+            Electronics
+          </label>
+          <label>
+            <input class="category-checkbox" type="checkbox" value="books" />
+            Books
+          </label>
+          <label>
+            <input class="category-checkbox" type="checkbox" value="clothing" />
+            Clothing
+          </label>
+        </div>
 
-      <div class="filter-group">
-        <h3>Price Range</h3>
-        <input type="range" min="0" max="5000" step="100" value="5000" />
-        <span class="price-value">$0 - $5000</span>
-      </div>
+        <div class="filter-group">
+          <h3>Price Range</h3>
+          <input id="priceRange" type="range" min="0" max="5000" step="100" value="5000" />
+          <span class="price-value">$0 - $5000</span>
+        </div>
 
-      <div class="filter-group">
-        <label>
-          <input type="checkbox" id="inStock" />
-          In stock only
-        </label>
-      </div>
+        <div class="filter-group">
+          <label>
+            <input type="checkbox" id="inStock" />
+            In stock only
+          </label>
+        </div>
 
-      <div class="filter-group">
-        <h3>Sort by</h3>
-        <select>
-          <option value="default">Default</option>
-          <option value="price-asc">Price: Low to High</option>
-          <option value="price-desc">Price: High to Low</option>
-        </select>
-      </div>
-    </aside>
+        <div class="filter-group">
+          <h3>Sort by</h3>
+          <select>
+            <option value="default">Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </aside>
 
-    <main class="products">
-      <h2>Products</h2>
-      <ul class="product-list">
-        <!-- Rendered by JavaScript -->
-      </ul>
-    </main>
-  </div>
+      <main class="products">
+        <h2>Products</h2>
+        <ul class="product-list">
+          <!-- Rendered by JavaScript -->
+        </ul>
+      </main>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

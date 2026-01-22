@@ -2,42 +2,42 @@ const products = [{
     id: 1,
     name: "Laptop",
     category: "electronics",
-    price: 1500,
+    price: 4500,
     inStock: true
 },
 {
     id: 2,
     name: "Game Of Thrones",
     category: "books",
-    price: 50,
+    price: 1500,
     inStock: true
 },
 {
     id: 3,
     name: "flower dress",
     category: "clothing",
-    price: 350,
+    price: 3500,
     inStock: true
 },
 {
     id: 4,
     name: "Shirt",
     category: "clothing",
-    price: 500,
+    price: 700,
     inStock: false
 }
     , {
     id: 5,
     name: "Alice's Adventures in Wonderland",
     category: "books",
-    price: 100,
+    price: 350,
     inStock: false
 }
     , {
     id: 6,
     name: "Keyboard",
     category: "electronics",
-    price: 600,
+    price: 1000,
     inStock: false
 }
 ]
@@ -47,9 +47,35 @@ const filterState = {
     inStockOnly: false,
     sortType: "default"
 }
-const checkboxes = document.querySelectorAll(".filter-group input[type='checkbox']")
+function applyFilters() {
+    let filteredProduct = products
+    //category 
+    if (filterState.selectedCategories.length > 0) {
+        filteredProduct = products.filter(product =>
+            filterState.selectedCategories.includes(product.category),
+        )
+    }
+    //price slide
+    filteredProduct = filteredProduct.filter(product =>
+        product.price <= filterState.maxPrice
+    )
+    //inStock filter
+    if (filterState.inStockOnly) {
+        filteredProduct = filteredProduct.filter(product =>
+            product.inStock === true
+        )
+    }
+    if(filterState.sortType==="price-asc"){
+        filteredProduct.sort((a,b)=>a.price - b.price)
+    }
+    if(filterState.sortType==="price-desc"){
+        filteredProduct.sort((a,b)=>b.price - a.price)
+    }
+    console.log(filteredProduct)
+}
+const checkboxes = document.querySelectorAll(".category-checkbox")
 checkboxes.forEach(checkbox => {
-    checkbox.addEventListener("click", () => {
+    checkbox.addEventListener("change", () => {
         let selectedCategory = checkbox.value
         if (checkbox.checked) {
             if (!filterState.selectedCategories.includes(selectedCategory)) {
@@ -64,13 +90,23 @@ checkboxes.forEach(checkbox => {
         applyFilters();
     })
 })
-function applyFilters() {
-    let filteredProduct = products
-    if (filterState.selectedCategories.length > 0) {
-        filteredProduct = products.filter(product =>
-            filterState.selectedCategories.includes(product.category),
-        )
-    }
-    console.log(filteredProduct)
-}
+const priceRange = document.querySelector("#priceRange")
+const priceValue = document.querySelector(".price-value")
+priceRange.addEventListener("input", () => {
+    filterState.maxPrice = Number(priceRange.value)
+    priceValue.textContent = `$0 - $${priceRange.value}`
+    applyFilters()
+})
+const inStock = document.querySelector("#inStock")
+inStock.addEventListener("change", () => {
+    filterState.inStockOnly = inStock.checked
+    applyFilters()
+})
+
+const sortSelect=document.querySelector("select")
+sortSelect.addEventListener("change",()=>{
+    filterState.sortType=sortSelect.value
+    applyFilters()
+})
+
 
