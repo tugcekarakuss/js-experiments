@@ -48,7 +48,7 @@ const filterState = {
     sortType: "default"
 }
 function applyFilters() {
-    let filteredProduct = products
+    let filteredProduct = [...products]
     //category 
     if (filterState.selectedCategories.length > 0) {
         filteredProduct = products.filter(product =>
@@ -65,13 +65,14 @@ function applyFilters() {
             product.inStock === true
         )
     }
-    if(filterState.sortType==="price-asc"){
-        filteredProduct.sort((a,b)=>a.price - b.price)
+    //sort by
+    if (filterState.sortType === "price-asc") {
+        filteredProduct.sort((a, b) => a.price - b.price)
     }
-    if(filterState.sortType==="price-desc"){
-        filteredProduct.sort((a,b)=>b.price - a.price)
+    if (filterState.sortType === "price-desc") {
+        filteredProduct.sort((a, b) => b.price - a.price)
     }
-    console.log(filteredProduct)
+    renderProducts(filteredProduct)
 }
 const checkboxes = document.querySelectorAll(".category-checkbox")
 checkboxes.forEach(checkbox => {
@@ -103,10 +104,29 @@ inStock.addEventListener("change", () => {
     applyFilters()
 })
 
-const sortSelect=document.querySelector("select")
-sortSelect.addEventListener("change",()=>{
-    filterState.sortType=sortSelect.value
+const sortSelect = document.querySelector("select")
+sortSelect.addEventListener("change", () => {
+    filterState.sortType = sortSelect.value
     applyFilters()
 })
 
+const productList = document.querySelector(".product-list")
+function renderProducts(products) {
+    productList.innerHTML = ""
+    if (productList.length === 0) {
+        productList.innerHTML = "<li>No Product Found</li>"
+        return
+    }
+    products.forEach(product => {
+        const li=document.createElement("li")
+        li.innerHTML=`
+            <strong>${product.name}</strong><br/>
+            Category: ${product.category}<br/>
+            Price: $${product.price}<br/>
+            ${product.inStock ? "In Stock" : "Out of Stock"}
+        `
+         productList.appendChild(li)
+    })
 
+}
+applyFilters()
