@@ -1,83 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Multi Step Form</title>
-  <script src="https://kit.fontawesome.com/2a98d6275d.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <div class="app">
-    <div class="form-card">
-
-      <div class="steps">
-        <span class="step active">1</span>
-        <span class="step">2</span>
-        <span class="step">3</span>
-      </div>
-
-      <!-- STEP 1 -->
-      <section class="form-step active" data-step="1">
-        <h2>User Info</h2>
-
-        <label>
-          Name
-          <input id="name" type="text" placeholder="Your name" />
-          <small class="error" id="nameError"></small>
-        </label>
-
-        <label>
-          Email
-          <input id="email" type="email" placeholder="example@mail.com" />
-          <small class="error" id="emailError"></small>
-        </label>
-
-        <button class="next-btn">Next</button>
-      </section>
-
-      <!-- STEP 2 -->
-      <section class="form-step" data-step="2">
-        <h2>Preferences</h2>
-
-        <div class="radio-group">
-          <label><input type="radio" name="role" value="frontend" /> Frontend</label>
-          <label><input type="radio" name="role" value="backend" /> Backend</label>
-          <label><input type="radio" name="role" value="designer" /> Designer</label>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multi Step Form</title>
+    <script
+      src="https://kit.fontawesome.com/2a98d6275d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="form-card">
+        <div class="steps">
+          <span class="step active" data-step="1">1</span>
+          <span class="step" data-step="2">2</span>
+          <span class="step" data-step="3">3</span>
         </div>
 
-        <label class="checkbox">
-          <input type="checkbox" />
-          Subscribe to newsletter
-        </label>
+        <!-- STEP 1 -->
+        <section class="form-step active" data-step="1">
+          <h2>User Info</h2>
 
-        <div class="actions">
-          <button class="back-btn">Back</button>
+          <label>
+            Name
+            <input id="name" type="text" placeholder="Your name" />
+            <small class="error" id="nameError"></small>
+          </label>
+
+          <label>
+            Email
+            <input id="email" type="email" placeholder="example@mail.com" />
+            <small class="error" id="emailError"></small>
+          </label>
+
           <button class="next-btn">Next</button>
-        </div>
+        </section>
 
-        <small class="error"></small>
-      </section>
+        <!-- STEP 2 -->
+        <section class="form-step" data-step="2">
+          <h2>Preferences</h2>
 
-      <!-- STEP 3 -->
-      <section class="form-step" data-step="3">
-        <h2>Summary</h2>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="role" value="frontend" />
+              Frontend</label
+            >
+            <label
+              ><input type="radio" name="role" value="backend" /> Backend</label
+            >
+            <label
+              ><input type="radio" name="role" value="designer" />
+              Designer</label
+            >
+          </div>
 
-        <div class="summary-box">
-          <!-- JS ile doldurulacak -->
-        </div>
+          <label class="checkbox">
+            <input type="checkbox" />
+            Subscribe to newsletter
+          </label>
 
-        <div class="actions">
-          <button class="back-btn">Back</button>
-          <button class="submit-btn">Submit</button>
-        </div>
-      </section>
+          <div class="actions">
+            <button class="back-btn">Back</button>
+            <button class="next-btn">Next</button>
+          </div>
 
-      <p class="success-message"></p>
+          <small class="error" id="role-error"></small>
+        </section>
 
+        <!-- STEP 3 -->
+        <section class="form-step" data-step="3">
+          <h2>Summary</h2>
+
+          <div class="summary-box">
+            <!-- JS ile doldurulacak -->
+          </div>
+
+          <div class="actions">
+            <button class="back-btn">Back</button>
+            <button class="submit-btn">Submit</button>
+          </div>
+        </section>
+
+        <p class="success-message"></p>
+      </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

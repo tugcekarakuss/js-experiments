@@ -118,14 +118,14 @@ function renderProducts(products) {
         return
     }
     products.forEach(product => {
-        const li=document.createElement("li")
-        li.innerHTML=`
+        const li = document.createElement("li")
+        li.innerHTML = `
             <strong>${product.name}</strong><br/>
             Category: ${product.category}<br/>
             Price: $${product.price}<br/>
             ${product.inStock ? "In Stock" : "Out of Stock"}
         `
-         productList.appendChild(li)
+        productList.appendChild(li)
     })
 
 }

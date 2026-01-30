@@ -11,13 +11,29 @@ const formState = {
     role: ""
   }
 }
-const nextBtn = document.querySelector(".next-btn")
+const nextBtns = document.querySelectorAll(".next-btn")
+const backBtns = document.querySelectorAll(".back-btn")
 const nameInput = document.querySelector("#name")
 const emailInput = document.querySelector("#email")
 const nameError = document.querySelector("#nameError")
 const emailError = document.querySelector("#emailError")
 
-nextBtn.addEventListener("click", () => {
+function updateSteps() {
+  const steps = document.querySelectorAll(".form-step")
+  const stepIndicators = document.querySelectorAll(".steps .step")
+  steps.forEach(step => {
+    const stepNumber = Number(step.dataset.step)
+    step.classList.toggle("active", stepNumber === formState.currentStep)
+  })
+  stepIndicators.forEach((step, index) => {
+    step.classList.toggle(
+      "active",
+      index + 1 === formState.currentStep
+    )
+  })
+}
+
+function validateStep1() {
   nameError.textContent = ""
   emailError.textContent = ""
   formState.errors.name = ""
@@ -26,33 +42,67 @@ nextBtn.addEventListener("click", () => {
   let isValid = true
 
   if (nameInput.value.trim() === "") {
-    formState.errors.name = "Please enter your name"
+    formState.errors.name = "please enter your name"
     nameError.textContent = formState.errors.name
     isValid = false
   }
-  if (emailInput.value.trim() === "") {
-    formState.errors.email = "Please enter your email"
+
+  const emailValue = emailInput.value.trim()
+
+  if (emailValue === "") {
+    formState.errors.email = "please enter your email"
+    emailError.textContent = formState.errors.email
+    isValid = false
+  } else if (!emailValue.includes("@") || !emailValue.includes(".")) {
+    formState.errors.email = "please enter a valid email address"
     emailError.textContent = formState.errors.email
     isValid = false
   }
-  if (!isValid) {
-    return
-  }
+
+  if (!isValid) return false
 
   formState.formData.name = nameInput.value
-  formState.formData.email = emailInput.value
+  formState.formData.email = emailValue
 
-  console.log(formState.currentStep+=1)
-  console.log("STEP 1 OK", formState)
+  return true
+}
 
-  const formStep=document.querySelectorAll(".form-step")
-formStep.forEach((step)=>{
-  const stepNumber =step.dataset.step
-  if(formState.currentStep===Number(stepNumber)){
-    step.classList.add("active")
+
+function validateStep2() {
+  const roleErrorEl = document.querySelector("#role-error")
+  roleErrorEl.textContent = ""
+
+  const selectedRadio = document.querySelector("input[name='role']:checked")
+
+  if (!selectedRadio) {
+    roleErrorEl.textContent = "please select your role"
+    return false
   }
-  else{
-    step.classList.remove("active")
-  }
+
+  formState.formData.role =
+    selectedRadio.dataset.role || selectedRadio.value
+
+  return true
+}
+
+nextBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (formState.currentStep === 1) {
+      const ok = validateStep1()
+      if (!ok) return
+    }
+    if (formState.currentStep === 2) {
+      const ok = validateStep2()
+      if (!ok) return
+    }
+    formState.currentStep += 1
+    updateSteps()
+  })
 })
+backBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (formState.currentStep === 1) return
+    formState.currentStep -= 1
+    updateSteps()
+  })
 })
