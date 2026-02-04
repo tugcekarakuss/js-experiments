@@ -33,6 +33,7 @@ Here, I will add small projects, exercises, and experiments as I explore new Jav
 | <img src="./mini-expense-tracker/project-preview.gif" width="120"/> | **[Expense Tracker](./mini-expense-tracker/)** | A simple expense tracker application that allows users to add and delete expenses while automatically calculating the total amount. Focuses on DOM manipulation, event handling, and basic state management using vanilla JavaScript. | — | — |
 | <img src="./persistent-notes/project-preview.gif" width="120"/> | **[Notes App](./persistent-notes/)** | A simple notes application that allows users to add and delete notes dynamically. Focuses on DOM manipulation, event handling, and handling user input using vanilla JavaScript. | — | — |
 | <img src="./stateful-filter-engine/project-preview.gif" width="120"/> | **[Stateful Product Filter](./stateful-filter-engine//)** | A state-driven product filtering app that allows users to filter products by category, price range, stock availability, and sort order. Built with vanilla JavaScript, focusing on centralized state management, array filtering, and dynamic UI rendering. | — | — |
+| <img src="./multi-step-form/project-preview.gif" width="120"/> | **[Multi-Step Form](./multi-step-form/)** | A multi-step form application with step-based validation, centralized state management, dynamic step indicators, and a summary screen before submission. Built with vanilla JavaScript, focusing on state-driven UI, form validation, and DOM manipulation. | — | — |
 
 
 
