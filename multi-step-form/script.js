@@ -17,6 +17,9 @@ const nameInput = document.querySelector("#name")
 const emailInput = document.querySelector("#email")
 const nameError = document.querySelector("#nameError")
 const emailError = document.querySelector("#emailError")
+const summaryBox = document.querySelector(".summary-box")
+const successMessage = document.querySelector(".success-message")
+const submitBtn = document.querySelector(".submit-btn")
 
 function updateSteps() {
   const steps = document.querySelectorAll(".form-step")
@@ -67,7 +70,6 @@ function validateStep1() {
   return true
 }
 
-
 function validateStep2() {
   const roleErrorEl = document.querySelector("#role-error")
   roleErrorEl.textContent = ""
@@ -84,7 +86,6 @@ function validateStep2() {
 
   return true
 }
-
 nextBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     if (formState.currentStep === 1) {
@@ -97,6 +98,10 @@ nextBtns.forEach(btn => {
     }
     formState.currentStep += 1
     updateSteps()
+
+    if (formState.currentStep === 3) {
+      renderSummary()
+    }
   })
 })
 backBtns.forEach(btn => {
@@ -105,4 +110,19 @@ backBtns.forEach(btn => {
     formState.currentStep -= 1
     updateSteps()
   })
+})
+
+function renderSummary() {
+  summaryBox.innerHTML = `
+    <p> <strong>Name:</strong> ${formState.formData.name}</p>
+    <p> <strong>Email:</strong> ${formState.formData.email}</p>
+    <p> <strong>Role:</strong> ${formState.formData.role}</p>
+  `
+}
+submitBtn.addEventListener("click", () => {
+  successMessage.textContent = "Submitting"
+
+  setTimeout(() => {
+    successMessage.textContent = "Form successfully submitted 🎉"
+  }, 1000)
 })
