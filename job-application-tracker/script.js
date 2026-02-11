@@ -51,11 +51,87 @@ const filteredState = {
   minSalary: 0,
   sorting: ""
 }
+const list = document.querySelector("#applicationList")
 function applyFilters() {
+  list.innerHTML = ""
+
   let filteredApplication = [...applications]
-  //STATUS
-  
 
+  if (filteredState.workType !== "") {
+    filteredApplication = filteredApplication.filter((application) => {
+      return application.workType === filteredState.workType
+    })
+  }
 
+  if (filteredState.status !== "") {
+    filteredApplication = filteredApplication.filter((application) => {
+      return application.status === filteredState.status
+    })
+  }
+
+  if (filteredState.minSalary > 0) {
+    filteredApplication = filteredApplication.filter(application =>
+      application.salary >= filteredState.minSalary
+    )
+  }
+
+  if (filteredState.sorting === "salary-asc") {
+    filteredApplication.sort((a, b) => a.salary - b.salary)
+  }
+
+  if (filteredState.sorting === "salary-desc") {
+    filteredApplication.sort((a, b) => b.salary - a.salary)
+  }
+
+  if (filteredState.sorting === "date-new") {
+    filteredApplication.sort((a, b) => new Date(b.appliedDate) - new Date(a.appliedDate))
+  }
+
+  if (filteredState.sorting === "date-old") {
+    filteredApplication.sort((a, b) => new Date(a.appliedDate) - new Date(b.appliedDate))
+  }
+
+  filteredApplication.forEach((application) => {
+    const card = document.createElement("div")
+    card.classList.add("card")
+
+    card.innerHTML = `
+      <h3>${application.company}</h3>
+      <p>${application.position}</p>
+      <p>${application.workType} • ${application.status}</p>
+      <p>₺${application.salary}</p>
+      <small>${application.appliedDate}</small>
+      `
+    list.appendChild(card)
+  })
 }
+
 applyFilters()
+const typeSelect = document.querySelector("#typeFilter")
+typeSelect.addEventListener("change", (e) => {
+  filteredState.workType = e.target.value
+  applyFilters()
+})
+
+const statusFilter = document.querySelector("#statusFilter")
+statusFilter.addEventListener("change", (e) => {
+  filteredState.status = e.target.value
+  applyFilters()
+})
+
+
+const minSalaryInput = document.querySelector("#minSalary")
+
+minSalaryInput.addEventListener("input", (e) => {
+  filteredState.minSalary = Number(e.target.value)
+  applyFilters()
+})
+
+const sortSelect = document.querySelector("#sortSelect")
+
+sortSelect.addEventListener("change", (e) => {
+  filteredState.sorting = e.target.value
+  applyFilters()
+})
+
+

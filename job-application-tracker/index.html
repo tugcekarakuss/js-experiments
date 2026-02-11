@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Application Desk</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Application Desk</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <main class="container">
+      <header class="header">
+        <h1>Application Desk</h1>
+        <p>Track and organize your job applications</p>
+      </header>
 
-  <main class="container">
-    <header class="header">
-      <h1>Application Desk</h1>
-      <p>Track and organize your job applications</p>
-    </header>
+      <section class="filters">
+        <div class="filter-group">
+          <label>Work Type</label>
+          <select id="typeFilter">
+            <option value="">All</option>
+            <option value="remote">Remote</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="onsite">Onsite</option>
+          </select>
+        </div>
 
-    <section class="filters">
-      <div class="filter-group">
-        <label>Work Type</label>
-        <select id="typeFilter">
-          <option value="">All</option>
-          <option value="remote">Remote</option>
-          <option value="hybrid">Hybrid</option>
-          <option value="onsite">Onsite</option>
-        </select>
-      </div>
+        <div class="filter-group">
+          <label>Status</label>
+          <select id="statusFilter">
+            <option value="">All</option>
+            <option value="applied">Applied</option>
+            <option value="interview">Interview</option>
+            <option value="offer">Offer</option>
+            <option value="rejected">Rejected</option>
+          </select>
+        </div>
 
-      <div class="filter-group">
-        <label>Status</label>
-        <select id="statusFilter">
-          <option value="">All</option>
-          <option value="applied">Applied</option>
-          <option value="interview">Interview</option>
-          <option value="offer">Offer</option>
-          <option value="rejected">Rejected</option>
-        </select>
-      </div>
+        <div class="filter-group">
+          <label>Minimum Salary</label>
+          <input type="number" id="minSalary" placeholder="₺ / $" />
+        </div>
 
-      <div class="filter-group">
-        <label>Minimum Salary</label>
-        <input type="number" id="minSalary" placeholder="₺ / $" />
-      </div>
+        <div class="filter-group">
+          <label>Sort By</label>
+          <select id="sortSelect">
+            <option value="">Default</option>
+            <option value="salary-desc">Salary (High → Low)</option>
+            <option value="date-desc">Newest</option>
+          </select>
+        </div>
+      </section>
 
-      <div class="filter-group">
-        <label>Sort By</label>
-        <select id="sortBy">
-          <option value="">Default</option>
-          <option value="salary-desc">Salary (High → Low)</option>
-          <option value="date-desc">Newest</option>
-        </select>
-      </div>
-    </section>
+      <section class="list" id="applicationList">
+        <!-- JS renders cards here -->
+      </section>
+    </main>
 
-    <section class="list" id="applicationList">
-      <!-- JS renders cards here -->
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
