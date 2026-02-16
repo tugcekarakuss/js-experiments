@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Profile Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>GitHub Profile Viewer</h1>
+  </header>
+
+  <main class="container">
+
+    <div class="search-box">
+      <input type="text" id="usernameInput" placeholder="Enter GitHub username..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="statusMessage" class="status"></div>
+
+    <section id="profileSection" class="profile hidden">
+      <div class="profile-left">
+        <img id="avatar" />
+      </div>
+
+      <div class="profile-right">
+        <h2 id="name"></h2>
+        <p id="bio"></p>
+
+        <div class="stats">
+          <span id="followers"></span>
+          <span id="following"></span>
+          <span id="reposCount"></span>
+        </div>
+
+        <a id="profileLink" target="_blank">View on GitHub</a>
+      </div>
+    </section>
+
+    <section id="repoSection" class="repos hidden">
+      <h3>Repositories</h3>
+      <div id="repoList"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
