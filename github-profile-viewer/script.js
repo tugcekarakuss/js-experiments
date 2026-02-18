@@ -66,6 +66,7 @@ function resetUI() {
     repoSection.classList.add("hidden")
     errorContainer.classList.add("hidden")
     repoList.innerHTML = ""
+    fixedGif.classList.add("hidden")
 
 }
 async function findUser() {
@@ -77,7 +78,7 @@ async function findUser() {
     }
 
     statusMessages.textContent = "Loading... ";
-    searchBtn.disabled = "true"
+    searchBtn.disabled = true
     try {
         const user = await getUser(username)
         const repos = await getRepos(username)
