@@ -4,6 +4,8 @@ const searchBtn = document.querySelector("#searchBtn")
 const statusMessages = document.querySelector("#statusMessage")
 const profileSection = document.querySelector("#profileSection")
 const repoSection = document.querySelector("#repoSection")
+const repoList = document.querySelector("#repoList")
+
 
 const errorContainer = document.querySelector("#errorContainer")
 const fixedGif = document.querySelector(".fixed-gif-container")
@@ -30,11 +32,41 @@ const getUser = async (username) => {
     }
     return await response.json()
 }
+
+const getRepos = async (username) => {
+    const response = await fetch(githubProfileApi + username + "/repos")
+    if (!response.ok) {
+        throw new Error("Failed to fetch repos")
+    }
+    return await response.json()
+}
+
+function renderRepos(repos) {
+    repoList.innerHTML = ""
+    repos.forEach(repo => {
+        const div = document.createElement("div")
+        div.classList.add("repo-card")
+
+        div.innerHTML = `
+            <h4>
+                <a href="${repo.html_url}" target="_blank">
+                    ${repo.name}
+                </a>
+            </h4>
+            <p>${repo.description || "No description"}</p>
+            <small>⭐ ${repo.stargazers_count} • ${repo.language || "Unknown"}</small>
+        `
+        repoList.appendChild(div)
+    });
+    repoSection.classList.remove("hidden")
+}
 function resetUI() {
     statusMessages.textContent = ""
     profileSection.classList.add("hidden")
     repoSection.classList.add("hidden")
     errorContainer.classList.add("hidden")
+    repoList.innerHTML = ""
+
 }
 async function findUser() {
     resetUI()
@@ -45,10 +77,11 @@ async function findUser() {
     }
 
     statusMessages.textContent = "Loading... ";
-
+    searchBtn.disabled = "true"
     try {
         const user = await getUser(username)
-        console.log(user)
+        const repos = await getRepos(username)
+        console.log(repos)
         statusMessages.textContent = "User found successfully."
         profileSection.classList.remove("hidden")
         fixedGif.classList.remove("hidden")
@@ -60,6 +93,8 @@ async function findUser() {
         following.textContent = "Following: " + user.following
         reposCount.textContent = "Public Repos: " + user.public_repos
         profileLink.href = user.html_url
+        renderRepos(repos)
+        searchBtn.disabled = false;
 
     } catch (error) {
         statusMessages.textContent = error.message;
